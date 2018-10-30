@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pop Movies</string>
+    <string name="moves_details">MovieDetail</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="top_rate">Top Rate</string>
+    <string name="review">Review</string>
+    <string name="trailer">Trailer</string>
+</resources>

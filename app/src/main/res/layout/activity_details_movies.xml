@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="30dp"
+        android:paddingStart="20dp"
+        android:textSize="24sp"
+        android:id="@+id/title"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/title"
+        android:id="@+id/image_movies"
+        android:src="@drawable/movies"
+        android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:layout_toEndOf="@+id/image_movies"
+        android:layout_below="@+id/title"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="24dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rate"
+        android:layout_toEndOf="@+id/image_movies"
+        android:layout_below="@id/date"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_movies"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/description"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trailer"
+            android:id="@+id/tailer"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_below="@+id/description"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tailer"
+            android:layout_marginTop="18dp"
+            android:id="@+id/recycle_movies_trailer"
+            tools:listitem="@layout/list_item_trailer">
+        </android.support.v7.widget.RecyclerView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/review"
+            android:id="@+id/review"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_below="@+id/recycle_movies_trailer"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/review"
+            android:layout_marginTop="18dp"
+            android:id="@+id/recycle_movies_review"
+            tools:listitem="@layout/list_item_review">
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_favorite"
+            android:layout_marginEnd="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="24dp"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="18dp"
+            android:id="@+id/add_favorite"/>
+    </RelativeLayout>
+
+</ScrollView>
